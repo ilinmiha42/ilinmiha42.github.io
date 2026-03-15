@@ -7,6 +7,41 @@
         body { font-family: arial-black; text-align: center; background: #f4f4f4; }
         img { width: 200px; border-radius: 50%; }
         .container { max-width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 10px; }
+		/* Делаем меню прилипающим к верху экрана */
+nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Разделяем секции визуально */
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #ddd;
+    min-height: 400px; /* Чтобы секции были крупными */
+}
+
+/* Плавный скролл при нажатии на меню */
+html {
+    scroll-behavior: smooth;
+}
     </style>
 </head>
 <body>
@@ -18,7 +53,7 @@
         <li><a href="#prog">Актуальная программа трени</a></li>
     </ul>
 	</nav>
-	<section id="msh">
+<section id="msh">
     <div class="container">
         <img src="msh.jpg" alt="Миша">
 	<img src="msh1.jpg" alt="Миша">
